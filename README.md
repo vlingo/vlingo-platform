@@ -39,6 +39,7 @@ Docs: https://docs.vlingo.io/
 
 Prerequisites:
 * Java JDK 8 or greater
+* [GraalVM 21.1.0 Java 8/11](https://www.graalvm.org/docs/getting-started/)
 
 ## Maintaining the Libraries
 
@@ -55,6 +56,12 @@ and execute the `install` phase with the `modules` profile activated:
 ./pull.sh
 mvn clean install -Pmodules
 ```
+### GraalVM builds
+
+```bash
+mvn clean install -Pmodules -Pnative-image
+```
+More details [GraalVM](GraalVM.md)
 
 ### CI build configuration
 
